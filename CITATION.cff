@@ -1,11 +1,19 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite it as below."
+title: "QUCT: Criticality Parameter gamma-star for Riemann Zeros"
+version: "1.0.0"
+date-released: "2025-11-27"
 authors:
-- family-names: "Chechelnitsky"
-  given-names: "Igor"
-  orcid: "https://orcid.org/0009-0007-4607-1946"
-title: "QUCT: Criticality Parameter γ* for Riemann Zeros"
-version: 1.0.0
-date-released: 2025-11-25
-url: "https://github.com/<your-account>/quct-gamma-star-riemann"
-license: "OSL-ER-1.0"
+  - family-names: "Chechelnitsky"
+    given-names: "Igor"
+    orcid: "https://orcid.org/0009-0007-4607-1946"
+    affiliation: "Independent Researcher, Ashkelon, Israel"
+license: "other-open"
+repository-code: "https://github.com/Muhomor2/QUCT-Criticality-Parameter-for-Riemann-Zeros"
+keywords:
+  - QUCT
+  - Riemann zeta function
+  - Random Matrix Theory
+  - GUE
+  - criticality parameter
+  - spectral statistics
