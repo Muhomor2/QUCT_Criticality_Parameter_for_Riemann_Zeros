@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{QUCT: A Simple Explanation of the Universal Criticality Parameter $\gamma^*$}
+\author{Igor Chechelnitsky}
+\date{2025}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This document explains, in simple and intuitive language, what the QUCT project is, what the criticality parameter $\gamma^*$ means, how it is computed, and why this parameter is important for the study of Riemann zeros and Random Matrix Theory. No advanced mathematical background is required.
+\end{abstract}
+
+\section{Introduction}
+The QUCT project (Qadmon Universal Criticality Theory) investigates a simple question:
+
+\textbf{Why do the zeros of the Riemann zeta function follow the same statistics as random matrices?}
+
+This is one of the most famous observations in modern mathematics. Many people know \emph{that} it happens, but almost no one can explain \emph{why}.
+
+Our approach introduces a new mathematical quantity, called the \textbf{criticality parameter} $\gamma^*$.
+
+\section{What is $\gamma^*$?}
+Imagine you have a long list of numbers (like the zeros of the zeta function). Between each pair there is a spacing. These spacings behave in a very special way: the small spacings appear less often than random, and the medium spacings appear more often. This is the ``repulsion'' typical of quantum chaotic systems.
+
+The constant $\gamma^*$ is a number that describes exactly where the behaviour of spacings changes from one regime to another.
+
+In QUCT, $\gamma^*$ is defined as the solution of a simple equation:
+\[
+F'''(\gamma^*) = 0.
+\]
+
+This means that $\gamma^*$ is the point where the curvature of a special function $F(\gamma)$ changes sign. This corresponds to a ``phase transition’’ in the structure of spacings.
+
+\section{How do we compute $\gamma^*$?}
+We use a function of the form:
+\[
+F'''(\gamma) = -A a^3 e^{-a\gamma} - B b^3 e^{-b\gamma} + 2\mu.
+\]
+
+The parameters $A, B, a, b, \mu$ come from the QUCT model.
+
+We then use a numerical solver to find the value of $\gamma$ where $F'''(\gamma) = 0$.
+
+The result is:
+\[
+\gamma^* \approx 0.3958242245.
+\]
+
+This value is extremely stable and appears in many independent computations.
+
+\section{Why is $\gamma^*$ important?}
+It is important because:
+\begin{itemize}
+    \item it matches the numerical behaviour of Riemann zeros,
+    \item it predicts the transition point in the spacing distribution,
+    \item it appears to be universal (independent of details),
+    \item it gives a possible explanation why Riemann zeros behave like eigenvalues of random matrices (GUE).
+\end{itemize}
+
+\section{How to reproduce the result}
+The repository contains the Python script:
+\begin{itemize}
+    \item \texttt{src/quct\_gamma\_root.py}
+\end{itemize}
+
+It computes $\gamma^*$ using high precision arithmetic.
+
+Anyone can reproduce the same value with the same code.
+
+\section{Summary}
+This document gives an intuitive introduction to the meaning of the QUCT criticality parameter $\gamma^*$. For full mathematical details, please see the main technical report in the repository.
+\end{document}
